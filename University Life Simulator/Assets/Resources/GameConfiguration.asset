@@ -58,7 +58,7 @@ MonoBehaviour:
     _counterType: 0
     _intMinimum: 0
     _floatMinimum: 0
-    _intMaximum: 1000000000
+    _intMaximum: 10000
     _floatMaximum: 3.4028235e+38
     _intDefault: 0
     _floatDefault: 0

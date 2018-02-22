@@ -21,8 +21,8 @@ public class PlayerController2 : AbstractCharacter
 
     // Use this for initialization
     protected override void Start () {
-        sleep.Initialize(start_sleep_value, max_sleep_value, "sleep");
-        hunger.Initialize(start_hunger_value, max_hunger_value, "hunger");
+        //sleep.Initialize(start_sleep_value, max_sleep_value);
+        //hunger.Initialize(start_hunger_value, max_hunger_value);
     }
 	
     private void GetInput()

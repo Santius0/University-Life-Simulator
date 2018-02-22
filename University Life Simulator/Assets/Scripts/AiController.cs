@@ -55,7 +55,7 @@ public class AiController : MonoBehaviour {
 		float xDiff = Mathf.Abs (target.position.x - transform.position.x);
 		float yDiff = Mathf.Abs (target.position.y - transform.position.y);
 		float pythagorean_distance = Mathf.Sqrt ((xDiff * xDiff) + (yDiff * yDiff));
-		print (pythagorean_distance);
+		// print (pythagorean_distance);
 
 		if (pythagorean_distance > 0.8) {
 			// walk to meet player, cover the widest plane first
@@ -69,13 +69,13 @@ public class AiController : MonoBehaviour {
 		} else {
 			// kill player
 			print ("LASH");
-			DialogManager.Instance.ShowInfo ("Stabbed to death... game over");
+			// DialogManager.Instance.ShowInfo ("Stabbed to death... game over");
 		}
 
         //Call the AttemptMove function and pass in the generic parameter Player, because Enemy is moving and expecting to potentially encounter a Player
         //AttemptMove<Player>(xDir, yDir);
 		Vector2 direction = new Vector2(xDir, yDir);
-		print (direction.ToString ());
+		// print (direction.ToString ());
 		AnimateMovement(direction);
 		velocity = direction * speed;
     }

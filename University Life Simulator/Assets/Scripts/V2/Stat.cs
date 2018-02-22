@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Stat : MonoBehaviour {
+public class Stat : MonoBehaviour
+{
 
     private Image stat_bar;
     private float curr_fill;
@@ -27,7 +28,7 @@ public class Stat : MonoBehaviour {
         {
             if (value > max_value)
                 curr_value = max_value;
-            else if(value < 0)
+            else if (value < 0)
                 curr_value = 0;
             else
                 curr_value = value;
@@ -50,10 +51,11 @@ public class Stat : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         stat_bar = GetComponent<Image>();
         color = new Color32(255, 255, 255, 255);
-	}
+    }
 
     public void Initialize(float curr, float max, string name)
     {
@@ -62,13 +64,14 @@ public class Stat : MonoBehaviour {
         current_value = curr;
     }
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         if (Time.timeScale > 0)
         {
-            if(stat_name == "coins")
+            if (stat_name == "coins")
                 stat_bar.color = color;
             if (curr_fill != stat_bar.fillAmount)
                 stat_bar.fillAmount = Mathf.Lerp(stat_bar.fillAmount, curr_fill, Time.deltaTime * lerp_speed);
         }
-	}
+    }
 }

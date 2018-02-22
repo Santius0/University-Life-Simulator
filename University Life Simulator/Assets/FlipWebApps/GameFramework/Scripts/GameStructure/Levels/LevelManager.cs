@@ -231,12 +231,11 @@ namespace GameFramework.GameStructure.Levels
             Time.timeScale = timeScale;
             GameManager.SafeQueueMessage(new LevelPausedMessage(Level));
 
-            //Don't Need This
-            //if (showPauseDialog)
-            //{
-            //    Assert.IsTrue(PauseWindow.IsActive, "Enaure that you have added a pause window prefab to your scene.");
-            //   PauseWindow.Instance.Show();
-            //}
+            if (showPauseDialog)
+            {
+                Assert.IsTrue(PauseWindow.IsActive, "Enaure that you have added a pause window prefab to your scene.");
+                PauseWindow.Instance.Show();
+            }
         }
 
 
